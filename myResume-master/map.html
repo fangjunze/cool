@@ -1,0 +1,53 @@
+﻿<html> 
+<head> 
+<meta charset="uft-8"> 
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />    
+<title>利用HTML5和百度地图实现位置定位</title> 
+<script src="http://api.map.baidu.com/api?v=1.3" type="text/javascript"></script> 
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="lib/jQuery/jquery-1.11.1.min.js"></script>
+	<script src="lib/navFixed-1.0.1.min.js"></script>
+	<script src="js/main.js"></script>
+</head> 
+
+<body style="background-color: #129DE7; text-align: center;"> 
+		<h2 style="color: white;">
+			地图位置
+		</h2>
+		<br />
+			<div style=" height: 900px; margin: 0 auto;">
+		<p id="geo_loc" style="color: white;"></p> 
+		<br />
+	<div style="width:500px;height:500px;margin: 0 auto;border:#ccc solid 1px;border-radius: 250px; " id="dituContent" ></div> 
+	<div style="float: right;">
+		<a class="link" href="index.html#block-prjEXP" id="link-github" hideFocus="true"></a>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p style="text-align: center;">返回功能展示</p>
+	</div>
+		</div>
+			
+		<script> 
+		if(navigator.geolocation){ 
+		    	navigator.geolocation.getCurrentPosition( 
+		        	function(p){ 
+		            	document.getElementById('geo_loc').innerHTML="纬度"+p.coords.latitude+"经度"+p.coords.longitude; 
+		            	createMap(p.coords.latitude,p.coords.longitude); 
+		        	}, 
+		        	function(err){ 
+		            	document.getElementById('geo_loc').innerHTML=err.code+"\n"+err.message; 
+		        	} 
+		    	); 
+		}else{ 
+		    	document.getElementById('geo_loc').innerHTML="您的浏览器不支持地图定位"; 
+		} 
+		function createMap(a,b){ 
+		    	var map=new BMap.Map("dituContent");           
+		    	var point=new BMap.Point(b,a);          
+		    	map.centerAndZoom(point,15);            
+			map.enableScrollWheelZoom();           
+		    	window.map=map;                 
+		} 
+		</script> 
+</body> 
+</html>

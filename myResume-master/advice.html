@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit"> 
+	<title>陈超强的简介</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="lib/jQuery/jquery-1.11.1.min.js"></script>
+	<script src="lib/navFixed-1.0.1.min.js"></script>
+	<script src="js/main.js"></script>
+	<style type="text/css" media="screen">   
+            *{ margin: 0; padding: 0;}   
+            body{ font-size: 14px;}   
+            ul,li{ list-style: none; list-style-position: outside;}   	
+            .form_item{ min-height: 30px; margin-top: 5px;text-indent:0;}   
+            .form_item label{ display: block; line-height: 24px;}   
+            .form_item input[type="text"]{ width: 180px; height:24px; line-height: 24px;}   
+            .form_item textarea{ vertical-align: top;}   
+            .form_item input[type="submit"],input[type="button"]{ width: 80px; height:24px; line-height: 24px; border:1px solid #ff6600; border-radius:4px; background:#ff6600; outline:none; color:#fff; cursor: pointer;}   
+            .form_item input[type="submit"]{ margin-right: 50px;}   
+            .form_item input[type="submit"]:hover{ position: relative; top:1px;}   
+               
+            .datalist{ min-height:300px; border-top: 1px solid #e4e4e4;}   
+            .datalist dt{ height: 30px; line-height: 30px; background:#e8e8e8;}   
+            .datalist dd{ min-height:30px;line-height: 24px; text-indent:2em;}   
+            .datalist time{ float: right; }   
+               
+           
+            table { width:100%; border:1px solid #e4e4e4; }   
+            table td{ border:1px solid #e4e4e4;}   
+               
+            .msg{ height:24px; line-height: 24px;}   
+            .count_wrap{ border:1px solid #e4e4e4; text-indent: 0;}   
+            .count_wrap .count{ margin-right: 50px;}   
+            .count{ color: red; font-size: 18px;}   
+        </style>   
+</head>
+<body>
+	<section id="block-firstPage">
+		<p class="blockTitle">您的宝贵意见</p>
+		<div id="fstPage-down"><a href="#block-wantMore" hideFocus="true"></a></div>
+	</section>
+
+	<section id="block-wantMore">
+		<div id="">
+			<p style="font-size: 48px;">留言板<br /></p>
+		<span id="memo" cols="50" rows="20"></span>
+		<p align="center">
+			<input type="button" value="显示留言内容" onclick="loadStorage('memo');">
+		<input type="button" value="全部清除" onclick="clearStorage('msg');">	
+		</p>
+		<p id="msg"></p>
+		</div>
+		<div style="float: right;">
+				<a class="link" href="index.html#block-prjEXP" id="link-github" hideFocus="true"></a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p style="text-align: center;">返回功能展示</p>
+		</div>
+	</section>
+
+
+
+</body>
+</html>

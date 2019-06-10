@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit"> 
+	<title>陈超强的简介</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="lib/jQuery/jquery-1.11.1.min.js"></script>
+	<script src="lib/navFixed-1.0.1.min.js"></script>
+	<script src="js/main.js"></script>
+
+</head>
+<body>
+	<!--欢迎页-->
+	<section id="block-firstPage">
+		<p class="blockTitle">Hello World</p>
+		<div id="fstPage-down"><a href="#block-intro" hideFocus="true"></a></div>
+	</section>
+	<!--导航栏-->
+	<section id="block-nav">
+		<header class="container">
+			<a class="fl" href="#block-firstPage" id="logo" hideFocus="true">George Chen</a>
+			<nav class="fr">
+				<a href="#block-intro" id="nav-intro" hideFocus="true">个人简介</a>
+				<a href="#block-skill" id="nav-skill" hideFocus="true">专业技能</a>
+				<a href="#block-workEXP" id="nav-workEXP" hideFocus="true">多媒体控制</a>
+				<a href="#block-prjEXP" id="nav-prjEXP" hideFocus="true">功能展示</a>
+				<a href="#block-wantMore" id="nav-wantMore" hideFocus="true">意见反馈</a>
+			</nav>
+		</header>
+	</section>
+	<!--个人简介-->
+	<section id="block-intro">
+		<div class="container">
+			<div id="intro-icon">
+				<a class="link"  id="link-github" hideFocus="true">GitHub</a>
+				<a class="link"  id="link-linkedin" hideFocus="true">Linkedin</a>
+				<img id="myPhoto" src="img/myhead_meitu_1.jpg">
+				<a class="link"  id="link-blog" hideFocus="true">Blog</a>
+				<a class="link" href="mailto:&#x79;&#101;&#106;&#117;&#110;&#x78;&#x69;&#110;&#103;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;" id="link-email" hideFocus="true">E-mail</a>
+			</div>
+
+			<div id="intro-text">
+				<ul class="fl">
+					<li><span>姓名</span> | 陈超强 - George Chen</li>
+					<li><span>手机</span> | 13306028609</li>
+					<li><span>学院</span> | 厦门理工学院—软件学院</li>
+					<li><span>所在地</span> | 福建 - 泉州</li>
+				</ul>
+				<div class="fr">
+					<p>我是一个性格幽默、做事认真的人。<br>我喜欢研究所碰到的各种技术，不给自己设边界。<br>我有较强的时间概念，能在约定时间内保证完成任务。</p>
+					<p>有较长的学习前端时长，熟悉 HTML、CSS，Javascript技术的话还在努力加强。<br/>能熟练开发符合 W3C 标准的页面，刚开始使用 jQuery、Bootstra 框架。<br>
+						拥有有良好的编码习惯。<br>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--专业技能-->
+	<section id="block-skill">
+		<div class="container">
+			<div class="skill-title">
+				<h2>专 业 技 能</h2>
+			</div>
+			<div class="skills">
+				<ul class="skill-lang">
+					<li>语言</li>
+					<li>HTML(5)</li>
+					<li>JAVA</li>
+					<li>Android</li>
+					<li>CSS(3)</li>
+					<li>Javascript</li>
+					<li>SQL</li>
+				</ul>
+				<ul class="skill-idea">
+					<li>思想</li>
+					<li>W3C标准</li>
+					<li>语义化</li>
+					<li>表现与结构分离</li>
+					<li>响应式设计</li>
+				</ul>
+				<ul class="skill-frame">
+					<li>框架</li>
+					<li>jQuery</li>
+					<li>Bootstrap</li>
+					<li>XUtil</li>
+					<li>SSH</li>
+				</ul>
+				<ul class="skill-tech">
+					<li>技术</li>
+					<li>Hibernate</li>
+					<li>CSS</li>
+					<li>Ajax</li>
+					<li>Linux</li>
+					<li>Spring</li>
+					<li>SpringMVC</li>
+					<li>AutoCAD</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!--多媒体控制-->
+	<section id="block-workEXP">
+		<div class="container">
+			<div class="work-title">
+				<h2> &nbsp;多  媒  体  控  制</h2>
+			<br /><br />
+    <div >
+		  <video id="vdoMain" src="video/trailer.mp4"
+		         width="500px" height="300px" controls="true" 
+		         onMouseOut="v_move(0)" onMouseOver="v_move(1)"
+		         onPlaying="v_palying()" onPause="v_pause()"
+		         onLoadStart="v_loadstart();"
+		         onEnded="v_ended();"
+		         onTimeUpdate="v_timeupdate(this)"
+		         poster="img/myhead_meitu_1.jpg">
+		         你的浏览器不支持视频
+		  </video>
+		  <p id="pTip">
+		     <span id="spnPlayTip" class="spnL"></span>
+			<span id="spnTimeTip" class="spnR"></span>
+		  </p>
+	</div>
+</div>
+		</div>
+	</section>
+	<!--功能展示为三个-->
+	<section id="block-prjEXP">
+		<div class="container">
+			<div class="prjEXP-title">
+				<h2>功 能 展 示</h2>
+			</div>
+			<ul class="prjs">
+				<!--链接形式进入map.html-->
+				<li class="prj" id="prj-helpmechoose">
+					<a href="map.html"><div class="prj-logo"></div></a>
+					<h3 class="prj-title">地图位置</h3>
+					<p class="prj-intro">利用Html5和百度地图实现定位处理<br/>（现阶段是谷歌浏览器无法将地图加载出来，经纬度有显示）</p>
+				</li>
+				<!--链接形式进入advice.html-->
+				<li class="prj" id="prj-helpmechoose">
+					<a href="advice.html"><div class="prj-logo"></div></a>
+					<h3 class="prj-title">留言管理</h3>
+					<p class="prj-intro">本功能包含离线应用以及数据<br/></p>
+				</li>
+				<!--链接形式进入drawCanvas.html-->
+				<li class="prj" id="prj-helpmechoose">
+					<a href="drawCanvas.html"><div class="prj-logo"></div></a>
+					<h3 class="prj-title">绘制图像</h3>
+					<p class="prj-intro">可实现绘制图像的功能，快进入体验吧</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!--留言反馈-->
+	<section id="block-wantMore">
+		<p>您可以留下宝贵的意见，以让我们改进。<br />
+		（PS:查看留言请移步至  功能展示->留言管理  中查看）<br /><br />
+		<textarea id="memo" cols="60" rows="10" ></textarea><br>
+		<input type="button"  value="发表留言" onclick="saveStorage('memo');">
+		</p>
+	</section>
+
+
+</body>
+</html>
